@@ -8,7 +8,7 @@ import icon from "astro-icon";
 
 // https://astro.build/config
 export default defineConfig({
-	site: "https://kittichanr-blog.vercel.app/",
+	site: "https://kittichanr.vercel.app/",
 	markdown: {
 		remarkPlugins: [remarkUnwrapImages],
 		rehypePlugins: [

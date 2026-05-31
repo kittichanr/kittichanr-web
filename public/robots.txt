@@ -2,4 +2,4 @@ User-agent: *
 Allow: /
 
 
-Sitemap: https://kittichanr-blog.vercel.app/sitemap-index.xml
+Sitemap: https://kittichanr.vercel.app/sitemap-index.xml

@@ -1,8 +1,8 @@
 <div align="center">
-  <img alt="Astro Cactus logo" src="https://raw.githubusercontent.com/kittichanr/kittichanr-blog/main/public/icon.svg" width="70" />
+  <img alt="Astro Cactus logo" src="https://raw.githubusercontent.com/kittichanr/kittichanr/main/public/icon.svg" width="70" />
 </div>
 <h1 align="center">
-  Kiitchanr Blog
+  Kiitchanr
 </h1>
 
 This is my personal website build by Astro framework. I use cactus theme for initial this project thank you for your inspired. see more configuration in [Repo](https://github.com/chrismwilliams/astro-theme-cactus)
@@ -16,7 +16,7 @@ This is my personal website build by Astro framework. I use cactus theme for ini
 
 [![Deploy with Vercel](https://vercel.com/button)]()
 
-I use vercel for deploy my website. this my url <https://kittichanr-blog.vercel.app/>
+I use vercel for deploy my website. this my url <https://kittichanr.vercel.app/>
 
 ## License
 
