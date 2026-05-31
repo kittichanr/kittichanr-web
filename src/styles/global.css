@@ -26,6 +26,7 @@
 
 	html {
 		@apply scroll-smooth;
+		scroll-padding-top: 8rem;
 	}
 
 	html body {
@@ -33,5 +34,10 @@
 		font-family: "CSChatThai", sans-serif;
 		font-size: 1.125em;
 		line-height: 1.75rem;
+	}
+
+	/* Scroll offset for anchor links */
+	section {
+		scroll-margin-top: 8rem;
 	}
 }

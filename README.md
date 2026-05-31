@@ -1,5 +1,5 @@
 <div align="center">
-  <img alt="Astro Cactus logo" src="https://raw.githubusercontent.com/kittichanr/kittichanr/main/public/icon.svg" width="70" />
+  <img alt="Astro Cactus logo" src="https://raw.githubusercontent.com/kittichanr/kittichanr-web/main/public/icon.svg" width="70" />
 </div>
 <h1 align="center">
   Kiitchanr
