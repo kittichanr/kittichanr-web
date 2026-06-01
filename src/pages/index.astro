@@ -4,14 +4,14 @@ import PageLayout from "@/layouts/Base";
 import { careerPath } from "@/utils";
 
 const meta = {
-	title: "Home",
+	title: "About",
 	description: "Personal website of Kittichan Ruadrewworakit - Software Engineer from Thailand",
 };
 ---
 
 <PageLayout meta={meta}>
-	<!-- HOME SECTION -->
-	<section id="home" class="mb-16">
+	<!-- ABOUT SECTION -->
+	<section id="about" class="mb-16">
 		<h1 class="title mb-6">👋 Hi there</h1>
 		<p class="mb-4">
 			I'm Kittichan you can call me <b>"Petch"</b>. I'm software engineer from Thailand 🇹🇭. 
@@ -22,9 +22,9 @@ const meta = {
 		<SocialList />
 	</section>
 
-	<!-- CAREER PATH SECTION -->
-	<section id="career" class="mb-16 space-y-12">
-		<h2 class="title mb-8">Career Path</h2>
+	<!-- EXPERIENCE PATH SECTION -->
+	<section id="experience" class="mb-16 space-y-12">
+		<h2 class="title mb-8">Experience</h2>
 		<div class="space-y-8">
 				{
 					careerPath.map((item) => {
@@ -46,9 +46,9 @@ const meta = {
 			</div>
 	</section>
 
-	<!-- TECH STACK SECTION -->
-	<section id="tech-stack" class="mb-16">
-		<h2 class="title mb-8">Tech Stack</h2>
+	<!-- SKILLS SECTION -->
+	<section id="skills" class="mb-16">
+		<h2 class="title mb-8">Skills</h2>
 		<div class="space-y-6">
 				{/* Languages */}
 				<div class="group space-y-3">
