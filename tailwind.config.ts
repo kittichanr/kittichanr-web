@@ -28,9 +28,19 @@ export default {
 				quote: "hsl(var(--theme-quote) / <alpha-value>)",
 			},
 			fontFamily: {
-				// Add any custom fonts here
-				sans: [...fontFamily.sans],
-				serif: [...fontFamily.serif],
+				// Neo-Brutalism fonts
+				sans: ["Space Grotesk", "Inter", ...fontFamily.sans],
+				mono: ["Space Mono", "Courier New", ...fontFamily.mono],
+				display: ["Space Grotesk", "Inter", ...fontFamily.sans],
+			},
+			boxShadow: {
+				"brutal": "6px 6px 0px 0px #000",
+				"brutal-sm": "3px 3px 0px 0px #000",
+				"brutal-lg": "8px 8px 0px 0px #000",
+			},
+			borderWidth: {
+				"3": "3px",
+				"5": "5px",
 			},
 			transitionProperty: {
 				height: "height",
@@ -48,45 +58,90 @@ export default {
 						"--tw-prose-bullets": theme("colors.textColor / 1"),
 						"--tw-prose-quotes": theme("colors.quote / 1"),
 						"--tw-prose-code": theme("colors.textColor / 1"),
-						"--tw-prose-hr": "0.5px dashed #666",
-						"--tw-prose-th-borders": "#666",
+						"--tw-prose-hr": "4px solid",
+						"--tw-prose-th-borders": theme("colors.textColor / 1"),
 					},
 				},
 				DEFAULT: {
 					css: {
+						fontFamily: "Space Grotesk, sans-serif",
 						a: {
-							"@apply cactus-link no-underline": "",
+							"@apply cactus-link": "",
+							fontWeight: "700",
 						},
 						strong: {
 							fontWeight: "700",
 						},
+						h1: {
+							fontWeight: "700",
+							borderBottom: "4px solid",
+							paddingBottom: "0.5rem",
+						},
+						h2: {
+							fontWeight: "700",
+							borderBottom: "3px solid",
+							paddingBottom: "0.25rem",
+						},
+						h3: {
+							fontWeight: "700",
+						},
 						code: {
-							border: "1px dotted #666",
-							borderRadius: "2px",
+							border: "3px solid",
+							borderColor: theme("colors.textColor / 1"),
+							borderRadius: "0",
+							padding: "0.25rem 0.5rem",
+							fontFamily: "Space Mono, monospace",
+							fontWeight: "700",
+							backgroundColor: theme("colors.accent / 0.1"),
+						},
+						"code::before": {
+							content: '""',
+						},
+						"code::after": {
+							content: '""',
+						},
+						pre: {
+							border: "4px solid",
+							borderColor: theme("colors.textColor / 1"),
+							borderRadius: "0",
+							boxShadow: "4px 4px 0px 0px",
 						},
 						blockquote: {
-							borderLeftWidth: "0",
+							borderLeft: "6px solid",
+							borderColor: theme("colors.accent / 1"),
+							fontWeight: "500",
+							fontStyle: "normal",
+							backgroundColor: theme("colors.accent / 0.05"),
+							padding: "1rem",
 						},
 						hr: {
-							borderTopStyle: "dashed",
+							borderTopWidth: "4px",
+							borderTopStyle: "solid",
+							borderColor: theme("colors.textColor / 1"),
 						},
 						thead: {
-							borderBottomWidth: "none",
+							borderBottomWidth: "4px",
+							borderBottomStyle: "solid",
 						},
 						"thead th": {
 							fontWeight: "700",
-							borderBottom: "1px dashed #666",
+							borderBottom: "4px solid",
 						},
 						"tbody tr": {
-							borderBottomWidth: "none",
+							borderBottomWidth: "2px",
+							borderBottomStyle: "solid",
 						},
 						tfoot: {
-							borderTop: "1px dashed #666",
+							borderTop: "4px solid",
+						},
+						ul: {
+							listStyleType: "square",
 						},
 						sup: {
 							"@apply ms-0.5": "",
 							a: {
 								"@apply bg-none": "",
+								fontWeight: "700",
 								"&:hover": {
 									"@apply text-link no-underline bg-none": "",
 								},
@@ -104,7 +159,7 @@ export default {
 					css: {
 						code: {
 							fontSize: theme("fontSize.sm")[0],
-							fontWeight: "400",
+							fontWeight: "700",
 						},
 					},
 				},
@@ -117,16 +172,19 @@ export default {
 		plugin(function ({ addComponents }) {
 			addComponents({
 				".cactus-link": {
-					"@apply bg-[size:100%_6px] bg-bottom bg-repeat-x": {},
-					backgroundImage:
-						"linear-gradient(transparent,transparent 5px,hsl(var(--theme-text)) 5px,hsl(var(--theme-text)))",
+					"@apply font-bold underline decoration-4 underline-offset-4": {},
 					"&:hover": {
-						backgroundImage:
-							"linear-gradient(transparent,transparent 4px,hsl(var(--theme-link)) 4px,hsl(var(--theme-link)))",
+						"@apply bg-accent text-bgColor": {},
 					},
 				},
 				".title": {
-					"@apply text-2xl font-semibold text-accent-2": {},
+					"@apply text-2xl font-bold text-accent-2 border-b-4 border-textColor pb-2": {},
+				},
+				".brutal-card": {
+					"@apply border-[5px] border-textColor shadow-brutal rounded-none": {},
+				},
+				".brutal-btn": {
+					"@apply border-[5px] border-textColor bg-accent font-bold px-6 py-3 shadow-brutal transition-all rounded-none hover:translate-x-[4px] hover:translate-y-[4px] hover:shadow-none": {},
 				},
 			});
 		}),
